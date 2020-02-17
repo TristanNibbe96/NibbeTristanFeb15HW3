@@ -1,0 +1,51 @@
+﻿Tristan Nibbe
+Feb 16 2020
+COMP 175 T
+
+
+2.
+
+
+int numbers[6];
+int * p;
+
+
+p = numbers; // p now points to the first element in numbers, numbers[0]
+
+
+*p = 1;        // that int is set to 1 numbers[0] = 1
+
+
+p++; // point to the next integer in numbers, numbers[1]
+
+
+*p = 4; //set that to four , numbers[1] = 4
+
+
+p = &numbers[2]; //p now points at the address of numbers[2]
+
+
+*p = numbers[0]; // set value of int to numbers[0], numbers[2] = 1
+
+
+p = numbers + *p; p now points at the address of numbers +1 so numbers[1]
+
+
+*p = 4; set this value to 4 so numbers[1] = 4
+
+
+p = numbers+1; p now points at the address of numbers +1 so numbers[1]
+
+
+*(p+4) = 5; value of address of p +4 is set to 5 , numbers[5] = 5
+
+
+So numbers should be:  1,4,1,garbage data,garbage data,5
+
+
+tnibbe@tnibbe-Inspiron-7573:~/Downloads/NibbeTristanFeb15HW3$ ./a.out
+Numbers : 1 4 1 21917 1718940048 5
+tnibbe@tnibbe-Inspiron-7573:~/Downloads/NibbeTristanFeb15HW3$ ./a.out
+Numbers : 1 4 1 21946 -1450690880 5
+tnibbe@tnibbe-Inspiron-7573:~/Downloads/NibbeTristanFeb15HW3$ ./a.out
+Numbers : 1 4 1 21946 -1812500480 5
